@@ -4,8 +4,8 @@ validated: no   # yes only after the interviewee's explicit go (GATE 3)
 # Material bank
 
 ## Quotes (exact, from the transcript)
-| # | Quote | Ref (Qn/An) | Validated |
-|---|---|---|---|
+| # | Quote (original) | Translation (if article in another language) | Ref (Qn/An) | Validated |
+|---|---|---|---|---|
 
 ## Stories
 | # | Moment (date) | Summary | Ref | F/D/O | Validated |

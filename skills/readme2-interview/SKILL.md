@@ -28,8 +28,11 @@ phase that needs them starts.
 7. **Gates.** Stop at each gate and wait for the interviewee's explicit go.
 8. **Humanizer, always.** No prose leaves the skill without the style pass in
    `references/style-pass.md`.
-9. **Run the interview in the interviewee's language.** The workspace files can stay in
-   that language too.
+9. **Languages are chosen, not assumed.** In Phase 1, record the interview language
+   (default: the language the interviewee writes in) and the article language(s), which
+   may differ. Run the interview and write the workspace files in the interview language.
+   When the article is in another language, translate from the validated bank and keep
+   each original quote next to its translation in `06-bank.md`.
 
 ## Workspace
 

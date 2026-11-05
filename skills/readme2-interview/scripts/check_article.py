@@ -76,9 +76,13 @@ def main():
         failures.append(f"transcript not found: {transcript_path}")
     else:
         transcript = normalise(transcript_path.read_text(encoding="utf-8"))
+        # A translated quote is accepted when it appears in the validated bank,
+        # where each translation sits next to its original quote.
+        bank_text = normalise(bank_path.read_text(encoding="utf-8")) if bank_path.is_file() else ""
         for quote in quotes_in(article):
-            if normalise(quote) not in transcript:
-                failures.append(f'quote not found verbatim in transcript: "{quote}"')
+            q = normalise(quote)
+            if q not in transcript and q not in bank_text:
+                failures.append(f'quote not found verbatim in transcript or bank: "{quote}"')
 
     if not bank_path.is_file():
         failures.append(f"bank not found: {bank_path}")
