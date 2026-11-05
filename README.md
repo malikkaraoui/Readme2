@@ -45,14 +45,14 @@ flowchart TD
 
 - It never invents a fact, a number, a date, a name or a quote. A gap stays marked `[?]`.
 - It never puts a reason in your mouth that you did not give. Its own inferences stay in the debrief, labelled as deductions.
-- It keeps your words. Quotation marks appear only around exact words from the transcript.
+- It keeps your words. Quotation marks appear only around exact words from the transcript, or around a translation validated in the bank.
 - It never raises a topic you declined.
 - It never publishes or shows a final text before your validation.
 
-The last check is `scripts/check_article.py`. Run it from the skill folder with `python3 scripts/check_article.py interviews/<slug>`. It exits with 0 when everything passes and 1 otherwise. It fails when:
+The last check is `scripts/check_article.py`. Run it from the root of your project, with the full path to the script: `python3 ~/.claude/skills/readme2-interview/scripts/check_article.py interviews/<slug>`. It exits with 0 when everything passes and 1 otherwise. It fails when:
 
 - `[?]` is still in the article;
-- a quotation of four words or more appears neither in the transcript nor in the validated bank (a translation passes when the bank holds it next to its original);
+- a quotation of four words or more appears neither in the transcript nor in the validated bank (a translation passes when the validated bank contains it);
 - `06-bank.md` is not marked `validated: yes`;
 - the article lacks `humanizer: done` in its frontmatter.
 

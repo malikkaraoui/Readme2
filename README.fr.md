@@ -45,14 +45,14 @@ flowchart TD
 
 - Il n'invente jamais un fait, un chiffre, une date, un nom ou une citation. Un trou reste marqué `[?]`.
 - Il ne prête jamais une raison que vous n'avez pas donnée. Ses propres déductions restent dans le débrief, étiquetées comme telles.
-- Il garde vos mots. Les guillemets n'entourent que des mots exacts de la transcription.
+- Il garde vos mots. Les guillemets n'entourent que des mots exacts de la transcription, ou une traduction validée dans la banque.
 - Il ne reprend jamais un sujet que vous avez refusé.
 - Il ne publie ni ne montre aucun texte final sans votre validation.
 
-Le dernier contrôle est `scripts/check_article.py`. Lancez-le depuis le dossier du skill avec `python3 scripts/check_article.py interviews/<slug>`. Il rend le code 0 si tout passe, 1 sinon. Il échoue si :
+Le dernier contrôle est `scripts/check_article.py`. Lancez-le depuis la racine de votre projet, avec le chemin complet du script : `python3 ~/.claude/skills/readme2-interview/scripts/check_article.py interviews/<slug>`. Il rend le code 0 si tout passe, 1 sinon. Il échoue si :
 
 - un `[?]` subsiste dans l'article ;
-- une citation d'au moins quatre mots n'apparaît ni dans la transcription, ni dans la banque validée (une traduction passe si la banque la donne à côté de son original) ;
+- une citation d'au moins quatre mots n'apparaît ni dans la transcription, ni dans la banque validée (une traduction passe si la banque validée la contient) ;
 - `06-bank.md` n'est pas marqué `validated: yes` ;
 - l'article n'a pas `humanizer: done` dans son en-tête.
 
