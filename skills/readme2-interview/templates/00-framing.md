@@ -9,4 +9,5 @@ status: draft   # draft | done (after GATE 1)
 - Audience:
 - Angle (one sentence):
 - Output: article
-- Language:
+- Interview language:
+- Article language(s):

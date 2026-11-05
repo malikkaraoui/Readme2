@@ -21,7 +21,9 @@ turning point).
 - First person, the interviewee's voice, unless the framing chose a journalist's voice
   (third person with quotes).
 - Every fact traces to the bank or the sources. Every quote is exact and appears in
-  `04-transcript.md`.
+  `04-transcript.md`. When the article language differs from the interview language,
+  use the translation validated in the bank and keep the meaning; never paraphrase a
+  translated quote further.
 - Every reason ("because", "so that") comes from the interviewee.
 - No `[?]` left: drop the claim or ask the interviewee before writing.
 - Numbers keep their referent and date ("1,275 commits in 44 days", not "a lot").
