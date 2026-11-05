@@ -18,7 +18,7 @@ The blank page stops most people before they start.
 
 ```mermaid
 flowchart TD
-  P1["1. Framing<br/>00-framing.md"] --> G1{"Gate 1<br/>you approve the angle"}
+  P1["1. Access and framing<br/>00-framing.md"] --> G1{"Gate 1<br/>you approve the angle"}
   G1 --> P2["2. Research<br/>01-sources.md"]
   P2 --> P3["3. Pre-interview<br/>02-pre-interview.md"]
   P3 --> P4["4. Interview guide<br/>03-guide.md"]
@@ -32,7 +32,7 @@ flowchart TD
   P8 --> G4{"Gate 4<br/>you approve before anything is published"}
 ```
 
-1. **Framing.** The skill asks only what it cannot infer: the project and its sources, the audience, the angle. It writes the framing and waits for your go.
+1. **Access and framing.** The skill first asks for read-only access to your source folder. Then it asks only what it cannot infer: the audience, the length, the languages, the angle. It writes the framing and waits for your go.
 2. **Research.** Before asking anything, the skill reads your sources and writes a dated timeline, with the gaps that no document records.
 3. **Pre-interview.** Three to five questions: what you expect, which topics matter, what is off limits, what must stay private.
 4. **Interview guide.** A plan built from dated facts: blocks ordered from light to heavy, with a bridge between them. You validate it before the interview starts.
@@ -74,7 +74,7 @@ cp -R Readme2/skills/readme2-interview ~/.claude/skills/
 
 (In French: « Interviewe-moi sur ce projet. »)
 
-The skill creates `interviews/<slug>/` in your project and keeps every step there. An interview can stop and resume across sessions.
+The skill creates `interviews/<slug>/` in your project and keeps every step there. The workspace is outside the source folder, which stays read-only. An interview can stop and resume across sessions.
 
 ## Roadmap
 

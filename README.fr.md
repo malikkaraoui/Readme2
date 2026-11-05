@@ -18,7 +18,7 @@ La page blanche arrête la plupart des gens avant même qu'ils commencent.
 
 ```mermaid
 flowchart TD
-  P1["1. Cadrage<br/>00-framing.md"] --> G1{"Porte 1<br/>vous approuvez l'angle"}
+  P1["1. Accès et cadrage<br/>00-framing.md"] --> G1{"Porte 1<br/>vous approuvez l'angle"}
   G1 --> P2["2. Recherche<br/>01-sources.md"]
   P2 --> P3["3. Pré-entretien<br/>02-pre-interview.md"]
   P3 --> P4["4. Guide d'entretien<br/>03-guide.md"]
@@ -32,7 +32,7 @@ flowchart TD
   P8 --> G4{"Porte 4<br/>vous approuvez avant toute publication"}
 ```
 
-1. **Cadrage.** Le skill ne demande que ce qu'il ne peut pas déduire : le projet et ses sources, le public, l'angle. Il écrit le cadrage et attend votre accord.
+1. **Accès et cadrage.** Le skill demande d'abord un accès en lecture seule à votre dossier de sources. Il ne demande ensuite que ce qu'il ne peut pas déduire : le public, la longueur, les langues, l'angle. Il écrit le cadrage et attend votre accord.
 2. **Recherche.** Avant de poser une question, le skill lit vos sources et écrit une chronologie datée, avec les trous qu'aucun document ne raconte.
 3. **Pré-entretien.** Trois à cinq questions : ce que vous attendez, les sujets qui comptent, ce qui est exclu, ce qui doit rester privé.
 4. **Guide d'entretien.** Un plan construit sur des faits datés : des blocs allant du plus léger au plus lourd, reliés par des questions de transition. Vous le validez avant l'entretien.
@@ -74,7 +74,7 @@ cp -R Readme2/skills/readme2-interview ~/.claude/skills/
 
 (En anglais : « Interview me about this project. »)
 
-Le skill crée `interviews/<slug>/` dans votre projet et y garde chaque étape. Un entretien peut s'arrêter et reprendre d'une session à l'autre.
+Le skill crée `interviews/<slug>/` dans votre projet et y garde chaque étape. L'espace de travail est hors du dossier source, qui reste en lecture seule. Un entretien peut s'arrêter et reprendre d'une session à l'autre.
 
 ## Feuille de route
 
